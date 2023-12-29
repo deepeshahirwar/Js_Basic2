@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body{
+    background-color: #212121; 
+    color: white;
+}
+.container{ 
+    height: 10rem; 
+    width: 35rem; 
+    border: 1px solid red;
+    display: flex; 
+    justify-content: center;  
+    align-items: center;
+    justify-content: space-around;
+} 
+.container div{
+  height: 8rem; 
+  width: 7rem;  
+  border: 1px solid red;
+} 
+
+.box1{
+    background: rgba(0, 255, 255, 0.813);
+}
+.box2{
+    background:rgba(172, 255, 47, 0.564);
+}
+.box3{
+    background: rgba(255, 255, 0, 0.737);
+}
+.box4{
+    background: rgba(200, 33, 33, 0.637);
+}

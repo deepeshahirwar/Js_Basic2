@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closeres in js</title>
+</head>
+
+<body style="background-color: #212121; color:#fff;">
+    <h2>Closeres in js</h2> 
+     <button id="orange">Orange</button>
+     <button id="green">Green</button>  
+     
+
+</body>
+<script>
+    //   lexical scoping
+    // function init() {
+    //     let name = "Mozilla";
+    //     function displayName() {
+
+    //         console.log(name);
+    //     }
+    //     displayName();
+    // }
+    //init(); 
+
+    //  function outer(){
+    //  let username ="deepesh";  
+    //  //console.log(secret); it will give error (lexical scope not applicable)
+    //  function inner(){
+    //     console.log("inner",username); 
+    //     console.log("age",age);
+    //  }  
+    //  function innerTwo() { 
+    //     //let secret ="my123";
+    //    console.log("innerTwo", username); 
+    //  } 
+    //  let age = 21;
+    //  inner();
+    //  innerTwo();
+    //  }  
+
+    //  outer();  
+
+    //console.log("outer",username); it will gove error (lexical scope not applicable) 
+
+
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName;
+    }
+
+    const myFunc = makeFunc();
+    myFunc();
+
+
+</script> 
+ 
+<script> 
+//  document.getElementById("orange").onclick = function(){
+//     document.body.style.backgroundColor =`orange`
+//  } 
+//  document.getElementById("green").onclick = function(){
+//     document.body.style.backgroundColor =`green`
+//  } 
+ 
+ function clickHandler(color){
+    //document.body.style.backgroundColor = `${color}` 
+  return  function (){
+        document.body.style.backgroundColor = `${color}`   
+    }
+ } 
+ document.getElementById("orange").onclick =  
+ clickHandler("orange");
+ document.getElementById("green").onclick = 
+ clickHandler("green");
+</script>
+ 
+</html>

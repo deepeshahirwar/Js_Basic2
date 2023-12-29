@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs in js </title>
+</head>
+<body style="background-color: rgba(11, 16, 50, 0.953);"> 
+      <h1>API CALLS </h1>
+</body> 
+ 
+<script> 
+ 
+ const requestUrl ='https://api.github.com/users/deepeshahirwar'; 
+ const xhr = new XMLHttpRequest(); 
+ xhr.open('GET', requestUrl); 
+ xhr.onreadystatechange = function(){
+    console.log(xhr.readyState); 
+     
+    if(xhr.readyState === 4){
+        const Mydata = JSON.parse(this.responseText); 
+        //console.log(typeof Mydata);
+        console.log(Mydata);  
+        console.log(Mydata.followers); 
+        console.log(Mydata.bio);
+    }
+ }
+xhr.send();
+</script> 
+
+</html>
